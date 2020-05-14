@@ -1,5 +1,6 @@
 <template>
   <div class="home flex flex-col mt-16 relative">
+    <NavBar />
     <div class="bg-blue-500 flex h-full justify-center items-center" style="height: 70vh">
       <div class="h-full container flex flex-col justify-center mt-8 lg:mt-0 lg:justify-around lg:flex-row items-center">
           <div class="lg:w-1/2 w-full -mt-8 flex flex-col items-center">
@@ -115,10 +116,12 @@
 </template>
 
 <script>
+import NavBar from '../components/navbar.vue'
 
 export default {
   name: 'Home',
   components: {
+    NavBar
   }
 }
 </script>

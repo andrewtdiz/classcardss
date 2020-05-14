@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto my-auto flex flex-col bg-white rounded-md">
+    <div class="flex flex-col bg-white mb-16 rounded-md">
         <div class="w-full rounded-t-md flex px-4 py-3 bg-gray-100 border-b border-gray-300">
             <p class="text-2xl font-bold">Delete</p>
         </div>

@@ -5,12 +5,14 @@
             :class="isbutton ? ['px-6', 'text-blue-100', 'hover:bg-blue-600', 'bg-blue-500', 'rounded-md', 'py-6'] : ''">{{title}}</p>
 
             <img src="../assets/direction.svg" class="ml-1 fill-current navicon" style="width: 10px" :class="hovering ? ['rotatenavicon', 'text-gray-500'] : ['text-gray-100']" alt="">
-            <div class="absolute min-w-48 overflow-y-hidden bg-white border py-2 rounded shadow-lg border-gray-300 navdrop"
+            <div class="absolute min-w-48 overflow-y-hidden bg-white border py-2 rounded shadow-2xl border-gray-300 navdrop"
             style="top:80%"
             :class="hovering ? '' : ['opacity-0', 'navdropanim', 'pointer-events-none']">
-                <div v-for="(link, ind) in dropdown" :key="ind" class="w-full py-2 rounded hover:text-blue-600 text-gray-800">
-                    <p class="text-left text-md w-full px-6">{{link}}</p>
-                </div>
+                <router-link v-for="(elem, ind) in dropdown" :key="ind" :to="elem.link">
+                    <div class="w-full py-2 rounded hover:text-blue-600 colorchangenav text-gray-800">
+                        <p class="text-left text-md w-full px-6">{{elem.name}}</p>
+                    </div>
+                </router-link>
             </div>
 
         </div>
@@ -57,5 +59,9 @@ export default {
 
 .navicon {
     transition: all 0.3s;
+}
+
+.colorchangenav{
+    transition: all 0.15s;
 }
 </style>

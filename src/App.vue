@@ -3,7 +3,6 @@
     <Modal v-if="modalValue!=''">
       <DeleteWindow v-if="modalValue=='delete'" />
     </Modal>
-    <NavBar />
     <router-view/>
   </div>
 </template>
@@ -11,13 +10,11 @@
 <script>
 import Modal from './components/modal.vue'
 import DeleteWindow from './components/deletewindow.vue'
-import NavBar from './components/navbar.vue'
 
 export default {
   components: {
     Modal,
-    DeleteWindow,
-    NavBar
+    DeleteWindow
   },
   computed: {
     modalValue () {

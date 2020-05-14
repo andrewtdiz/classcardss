@@ -2,14 +2,16 @@
     <div class="fixed top-0 z-10 bg-white w-full flex items-center md:items-baseline justify-center shadow ">
       <div class="container flex items-center bg-white  md:items-baseline justify-between py-3 lg:py-1">
         <div class="flex items-baseline bg-white ">
-            <div class="flex items-center pl-8 ml-3 lg:ml-0 relative cursor-pointer">
-            <img src="../assets/logo.svg" class="absolute left-0 w-8 h-auto" alt="">
-            <h1 class="text-2xl text-gray-900 font-bold tracking-tight">ClassCards</h1>
-            </div>
+            <router-link to="/">
+                <div class="flex items-center pl-8 ml-3 lg:ml-0 relative cursor-pointer">
+                    <img src="../assets/logo.svg" class="absolute left-0 w-8 h-auto" alt="">
+                    <h1 class="text-2xl text-gray-900 font-bold tracking-tight">ClassCards</h1>
+                </div>
+            </router-link>
             <div class="lg:flex items-baseline px-6 hidden">
-                <NavLink :title="'Features'" :dropdown="['Cards', 'Decks', 'Study Sessions', 'Groups']"/>
-                <NavLink :title="'Guides'"  :dropdown="['Making Cards', 'Studying', 'Interface', 'Settings & Customization', 'Teacher\'s Corner']"/>
-                <NavLink :title="'Company'"  :dropdown="['About Us', 'Careers', 'Our Team', 'Press', 'Legal']"/>
+                <NavLink :title="'Features'" :dropdown="featuresLinks"/>
+                <NavLink :title="'Guides'"  :dropdown="guidesLinks"/>
+                <NavLink :title="'Company'"  :dropdown="companyLinks"/>
                 <NavLink :title="'About'" :link="'/about'"/>
             </div>
         </div>
@@ -34,6 +36,72 @@ export default {
   name: 'NavBar',
   components: {
     NavLink
+  },
+  data () {
+    return {
+      featuresLinks: [
+        {
+          name: 'Cards',
+          link: '/cards'
+        },
+        {
+          name: 'Decks',
+          link: '/decks'
+        },
+        {
+          name: 'Study Sessions',
+          link: '/studysessions'
+        },
+        {
+          name: 'Groups',
+          link: '/groups'
+        }
+      ],
+      guidesLinks: [
+        {
+          name: 'Making Cards',
+          link: '/makingcards'
+        },
+        {
+          name: 'Studying',
+          link: '/studying'
+        },
+        {
+          name: 'Interface',
+          link: '/interface'
+        },
+        {
+          name: 'Settings & Customization',
+          link: '/settings'
+        },
+        {
+          name: 'Teacher\'s Corner',
+          link: '/teachers'
+        }
+      ],
+      companyLinks: [
+        {
+          name: 'About Us',
+          link: '/aboutus'
+        },
+        {
+          name: 'Careers',
+          link: '/careers'
+        },
+        {
+          name: 'Our Team',
+          link: '/team'
+        },
+        {
+          name: 'Press',
+          link: '/press'
+        },
+        {
+          name: 'Legal',
+          link: '/legal'
+        }
+      ]
+    }
   }
 }
 </script>
