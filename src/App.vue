@@ -1,12 +1,31 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" >
+    <Modal v-if="modalValue!=''">
+      <DeleteWindow v-if="modalValue=='delete'" />
+    </Modal>
+    <NavBar />
     <router-view/>
   </div>
 </template>
+
+<script>
+import Modal from './components/modal.vue'
+import DeleteWindow from './components/deletewindow.vue'
+import NavBar from './components/navbar.vue'
+
+export default {
+  components: {
+    Modal,
+    DeleteWindow,
+    NavBar
+  },
+  computed: {
+    modalValue () {
+      return this.$store.getters.getModalValue
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -17,16 +36,4 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
