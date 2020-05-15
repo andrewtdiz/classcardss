@@ -4,19 +4,10 @@
         <font-awesome-icon :icon="['fas', 'sort-down']" :class="hoveringCard ? 'text-gray-700' : 'opacity-0'" class="my-auto mr-3" style="transform: translateY(-3px)" />
         <div class="w-full flex items-stretch h-full bg-gray-300 cardshadow">
             <div class="flex-1 flex items-stretch h-full w-96 relative" >
-                <div class="w-4 h-full cardselector"
-                :class="(hoveringSelector || checked) ? ['w-8', 'mr-2']: ''"
-                @click="checked = !checked"
-                @mouseenter="hoveringSelector = true" @mouseleave="hoveringSelector = checked ? true : false">
-                    <div class="h-full cardselector cursor-pointer flex justify-center items-center overflow-hidden  relative"
-                    :class="barComputed">
-                        <div class="w-4 h-4 absolute flex flex-center items-center top-0"
-                        :class="checked ? 'bg-blue-800' : 'bg-white'" style="left: 0.5rem; top: 50%; transform: translateY(-50%); border-radius: 2px;">
-                            <font-awesome-icon v-if="checked" :icon="['fas', 'check']" class="w-2 h-2 text-white" style="transform: translateX(-3%)" />
-                        </div>
-                    </div>
+                <div class="absolute bg-red-500 w-4 h-full flex top-0 z-10">
+                  
                 </div>
-                <div class="flex-1 flex items-baseline my-auto overflow-hidden " >
+                <div class="flex-1 ml-4 flex items-baseline my-auto overflow-hidden " >
                     <div class="absolute w-3 h-full top-0 left-0 ml-4"
                     @mouseenter="hoveringSelector = true" @mouseleave="hoveringSelector = checked ? true : false"
                     @click="checked = !checked">
@@ -47,7 +38,8 @@ export default {
     return {
       hoveringSelector: false,
       checked: false,
-      hoveringCard: false
+      hoveringCard: false,
+      colors: ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-orange-500', 'bg-teal-500']
     }
   },
   methods: {
@@ -60,7 +52,18 @@ export default {
     deleteCard (val) {
       this.setModalValue('delete')
       this.setDeletingValue(val)
-    }
+    },
+    selectorStyle (val) {
+      let arr = []
+      arr.push((this.hoveringSelector || this.checked) ? ['w-8', 'mr-2']: '')
+      arr.push(this.colors[val])
+      return arr
+    },
+  },
+  computed: {
+    barComputed () {
+      return this.hoveringSelector ? 'w-8' : 'w-4'
+    },
   }
 }
 </script>
