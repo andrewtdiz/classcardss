@@ -7,8 +7,12 @@
       <button @click="sendCard" class="inputborder cursor-pointer px-4 focus:outline-none py-2 text-sm ml-4 bg-white border focus:border-blue-500 appearance-none rounded-md border-gray-300 hover:border-gray-400">Submit</button>
     </div>
     <div class="w-full h-full flex justify-center px-6">
-        <div class="w-1/4"></div>
-        <div class="flex flex-col w-full">
+        <div class="absolute top-0 left-0 bg-blue-500 flex flex-col items-start rotato h-full z-10" :class="sidebar ? 'w-64' : 'w-12'"> 
+          <div class="w-6 h-6 cursor-pointer bg-red-500" @click="sidebar = !sidebar">
+
+          </div>
+        </div>
+        <div class="flex flex-col w-full rotato" :class="sidebar ? 'ml-64' : 'ml-12'">
           <ListViewCardGroup v-for="(cardGroup, ind) in cards" :key="1000+ind" :cardGroup="cardGroup" />
 
         </div>
@@ -29,6 +33,7 @@ export default {
   data () {
     return {
       isFocus: false,
+      sidebar: false,
       inputText: ''
     }
   },
@@ -49,9 +54,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .inputborder:focus-within {
   box-shadow:
     0 0 0 2px #bee3f8;
+}
+
+.rotato {
+  transition: all 0.2s;
 }
 </style>

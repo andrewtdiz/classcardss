@@ -1,12 +1,12 @@
 <template>
   <div class="rounded-md w-full mb-8 bg-white flex flex-col overflow-hidden shadow"
-  :class="dropdown ? 'max-h-12' : 'max-h-screen'">
-    <div class="flex items-stretch bg-gray-100 py-2 mb-1 relative"
+  :class="dropdown ? 'max-h-10' : 'max-h-screen'" >
+    <div class="flex items-stretch bg-gray-100 hover:bg-gray-200 py-2 relative" @click="dropdown = !dropdown"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false">
-      <div  style="left: 1rem;" class="absolute h-full -mt-2 flex justify-center items-center rounded px-1 text-gray-900 hover:text-gray-700 cursor-pointer z-10"
-      @click="dropdown = !dropdown">
-        <svg :class="dropdown ? 'rotate-90' : ''" class=" my-auto fill-current text-gray-800 w-3 h-3 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 292.362 292.362" style="enable-background:new 0 0 292.362 292.362;" xml:space="preserve">
+      <div  :style="{left: dropdown ? '1rem' : '0.75rem'}" class="rotato absolute h-full -mt-2 flex justify-center items-center rounded px-1 text-gray-900 hover:text-gray-700 cursor-pointer z-10"
+      >
+        <svg :class="dropdown ? 'rotate-90' : ''" class="rotato my-auto fill-current text-gray-800 w-3 h-3 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 292.362 292.362" style="enable-background:new 0 0 292.362 292.362;" xml:space="preserve">
         <g>
           <path d="M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424   C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428   s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z"/>
         </g>
@@ -20,11 +20,20 @@
       @keydown.enter="editText = false">
         <p class="select-none my-auto border-b border-t border-transparent"
         >{{cardGroup.name}}</p>
-        <font-awesome-icon :icon="['fas', 'pencil-alt']" :class="hovering ? ['text-gray-600', 'hover:text-gray-700', 'cursor-pointer'] : 'opacity-0'" class="my-auto ml-3" size="sm" />
+        <svg xmlns="http://www.w3.org/2000/svg" :class="hovering ? 'block' : 'hidden'" xmlns:xlink="http://www.w3.org/1999/xlink" class="cursor-pointer hover:text-gray-800 ml-3 h-3 w-3 fill-current text-gray-600 my-auto" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 383.947 383.947" style="enable-background:new 0 0 383.947 383.947;" xml:space="preserve">
+        <g>
+          <g>
+            <g>
+              <polygon points="0,303.947 0,383.947 80,383.947 316.053,147.893 236.053,67.893    "/>
+              <path d="M377.707,56.053L327.893,6.24c-8.32-8.32-21.867-8.32-30.187,0l-39.04,39.04l80,80l39.04-39.04     C386.027,77.92,386.027,64.373,377.707,56.053z"/>
+            </g>
+          </g>
+        </g>
+        </svg>
       </div>
     </div>
     <div class="flex w-full items-center flex-col">
-      <ListViewCard v-for="(card, ind) in cardGroup.cards" :key="ind" :card="card"/>
+      <ListViewCard v-for="(card, ind) in cardGroup.cards" :key="ind" :cardGroupColor="cardGroup.color" :card="card"/>
     </div>
   </div>
 </template>
@@ -75,7 +84,7 @@ a {
 }
 
 .rotato {
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 
 .cardcontainer {

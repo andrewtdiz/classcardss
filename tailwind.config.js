@@ -324,6 +324,7 @@ module.exports = {
       ...negative(theme('spacing')),
     }),
     maxHeight: {
+      '10': '2.75rem',
       '12': '3rem',
       '16': '4rem',
       full: '100%',
