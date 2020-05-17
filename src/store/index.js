@@ -27,7 +27,7 @@ export default new Vuex.Store({
     }, {
       name: 'Pharmacology'
     }],
-    cards:
+    cardGroups:
     [
       {
         name: 'Deck 1',
@@ -61,11 +61,11 @@ export default new Vuex.Store({
     cardDeleting: -1
   },
   getters: {
+    getCardGroups (state) {
+      return state.cardGroups
+    },
     getModalValue (state) {
       return state.modalValue
-    },
-    getCards (state) {
-      return state.cards
     },
     getCardDeleting (state) {
       return state.cardDeleting
@@ -78,17 +78,10 @@ export default new Vuex.Store({
     setModalValue (state, val) {
       state.modalValue = val
     },
-    pushCard (state, val) {
-      state.cards.push(val)
-    },
-    removeCard (state, val) {
-      window.console.log(state.cards, state.cardDeleting, val)
-      state.cards.splice(val, 1)
-      window.console.log(state.cards, state.cardDeleting)
-    },
     setCardDeleting (state, val) {
       state.cardDeleting = val
-    }
+    },
+
   },
   actions: {
   },
