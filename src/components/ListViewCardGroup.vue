@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-md w-full mb-8 bg-white flex flex-col overflow-hidden shadow"
   :class="dropdown ? 'max-h-10' : 'max-h-screen'" >
-    <div class="flex items-stretch bg-gray-100 hover:bg-gray-200 py-2 relative" @click="dropdown = !dropdown"
+    <div class="flex cursor-pointer items-stretch hover:bg-gray-100 py-2 relative" @click="dropdown = !dropdown"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false">
       <div  :style="{left: dropdown ? '1rem' : '0.75rem'}" class="rotato absolute h-full -mt-2 flex justify-center items-center rounded px-1 text-gray-900 hover:text-gray-700 cursor-pointer z-10"
@@ -12,11 +12,11 @@
         </g>
         </svg>
       </div>
-      <div class="ml-12 mr-2 flex justify-center items-center rounded h-7 w-7 px-1"
+      <!-- <div class="ml-12 mr-2 flex justify-center items-center rounded h-7 w-7 px-1"
       :class="colors[cardGroup.color]">
         <font-awesome-icon :icon="['fas', 'book-open']" class="text-white" style="padding: 2px" size="lg"/>
-      </div>
-      <div class="flex h-full text-lg px-2 text-gray-900 font-bold cursor-text"
+      </div> -->
+      <div class="ml-12 flex h-full text-lg px-2 text-gray-900 cursor-text"
       @keydown.enter="editText = false">
         <p class="select-none my-auto border-b border-t border-transparent"
         >{{cardGroup.name}}</p>

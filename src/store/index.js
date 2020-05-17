@@ -6,6 +6,27 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     modalValue: '',
+    tags: [{
+      name: 'Biochemistry',
+      tags: [{
+        name: 'Metabolism',
+        tags: [{
+          name: 'Glycolysis',
+        }, {
+          name: 'Gluconeogenesis',
+        }, {
+          name: 'TCA Cycle'
+        }, {
+          name: 'Fat Metabolism'
+        }]
+      }, {
+        name: 'Vitamins'
+      }, {
+        name: 'DNA Replication'
+      }]
+    }, {
+      name: 'Pharmacology'
+    }],
     cards:
     [
       {
@@ -48,6 +69,9 @@ export default new Vuex.Store({
     },
     getCardDeleting (state) {
       return state.cardDeleting
+    },
+    getTags (state) {
+      return state.tags
     }
   },
   mutations: {

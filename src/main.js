@@ -7,6 +7,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTimes, faTimesCircle, faPencilAlt, faTrash, faChevronDown, faBars, faCheck, faComment, faBookOpen, faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+require('vue2-animate/dist/vue2-animate.min.css')
+
 library.add(faTimes)
 library.add(faPencilAlt)
 library.add(faTimesCircle)

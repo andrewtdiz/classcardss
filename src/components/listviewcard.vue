@@ -9,7 +9,7 @@
                 </div>
                 <div :class="selectorStyle" class="h-full cardselector relative overflow-hidden"
                 >
-                  <div class="absolute w-4 bg-blue-100 h-4" style="left:1rem; top: 1rem; border-radius: 2px; transform: translate(-50%, -25%)"></div>
+                  <div class="absolute w-4 bg-white h-4" style="left:1rem; top: 1rem; border-radius: 2px; transform: translate(-50%, -25%)"></div>
                 </div>
                 <div class="flex-1 text-sm flex items-baseline my-auto overflow-hidden cardselector" 
                 :class="hoveringSelector ? 'ml-2' : 'ml-2'">
