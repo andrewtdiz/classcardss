@@ -257,7 +257,7 @@ export default {
   },
   computed: {
     cards () {
-      return this.$store.getters.getCards
+      return this.$store.getters.getCardGroups
     },
     tags () {
       window.console.log(this.$store.getters.getTags)
