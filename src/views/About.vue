@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col" style='font-family: \"Times New Roman\", Times, serif;'>
-    <div class="h-screen bg-white flex flex-col items-center justify-center">
+    <!-- <div class="h-screen bg-white flex flex-col items-center justify-center">
       <div class="flex w-full">
         <div class="flex-1">
           <div class="w-full h-full bg-red-500"></div>
@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

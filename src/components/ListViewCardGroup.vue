@@ -1,10 +1,10 @@
 <template>
   <div class="rounded-md w-full mb-8 bg-white flex flex-col overflow-hidden shadow"
-  :class="dropdown ? 'max-h-10' : 'max-h-screen'" >
+  :class="dropdown ? 'max-h-10' : 'max-h-full'" >
     <div class="flex cursor-pointer items-stretch hover:bg-gray-100 py-2 relative" @click="dropdown = !dropdown"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false">
-      <div  :style="{left: dropdown ? '1rem' : '0.75rem'}" class="rotato absolute h-full -mt-2 flex justify-center items-center rounded px-1 text-gray-900 hover:text-gray-700 cursor-pointer z-10"
+      <div  :style="{left: dropdown ? '1rem' : '0.75rem'}" class="rotato absolute h-full -mt-2 flex justify-center items-center rounded px-1 text-gray-900 hover:text-gray-700 cursor-pointer z-1"
       >
         <svg :class="dropdown ? 'rotate-90' : ''" class="rotato my-auto fill-current text-gray-800 w-3 h-3 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 292.362 292.362" style="enable-background:new 0 0 292.362 292.362;" xml:space="preserve">
         <g>

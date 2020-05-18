@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen" >
+  <div class="flex flex-col max-h-screen overflow-x-hidden overflow-y-hidden" style="background: #e3e6ed">
     <!-- <div class="flex justify-center items-stretch my-2" style="padding-bottom: 2px;">
       <div class="flex items-center rounded" >
         <input @keydown.enter="sendCard" ref="inp" style="margin: 2px;" :class="inputText!='' ? '' : 'shadow-inner'" v-model="inputText" 
@@ -7,9 +7,13 @@
       </div>
       <button @click="sendCard" class="inputborder cursor-pointer px-4 focus:outline-none py-2 text-sm ml-4 bg-white border focus:border-blue-500 appearance-none rounded-md border-gray-300 hover:border-gray-400">Submit</button>
     </div> -->
-    <div class="w-full h-full flex justify-center px-6 pt-12 mt-16" style="background: #e3e6ed">
-        <div class="absolute top-0 left-0 bg-white w-full h-16">
-          <div class="flex-1 flex items-end h-full pl-16 rotato" :class="!sidebar ? 'ml-14' : 'ml-96'">
+    <div class="max-h-screen max-w-screen overflow-x-hidden h-screen w-screen flex justify-center px-6 pt-12 mt-16" >
+        <div class="mt-20 absolute top-0 left-0 flex flex-col z-1 rotato" :class="sidebar ? ['ml-72', 'pl-32'] : ['ml-2', 'pl-24']">
+          <ListViewCardGroup v-for="(cardGroup, ind) in cards" :key="1000+ind" :cardGroup="cardGroup" />
+
+        </div>
+        <div class="fixed top-0 left-0 bg-white w-full h-16">
+          <div class="flex-1 flex items-end h-full pl-16 rotato z-10" :class="!sidebar ? 'ml-14' : 'ml-96'">
             <div class="cursor-pointer rounded hover:bg-gray-300 mb-1">
               <p class=" text-xl text-gray-800 px-4 py-1">Zanki Step 1</p>
             </div>
@@ -141,7 +145,7 @@
 
           </div>
         </div>
-        <div class="absolute top-0 left-0 bg-blue-900 select-none overflow-x-hidden flex flex-col items-start rotato h-full z-10 w-16" > 
+        <div class="fixed top-0 left-0 bg-blue-900 select-none overflow-x-hidden flex flex-col items-start rotato h-full z-10 w-16" > 
             <div class="flex justify-center py-4 w-full hover:bg-blue-800 cursor-pointer">
               <div class="h-8 w-8 flex justify-center items-center bg-green-500 rounded">
                 <p class="text-white"> Z </p>
@@ -204,27 +208,24 @@
 
             </div>
         </div>
-        <div class="absolute top-0 left-0 bg-white shadow flex flex-col items-center overflow-x-hidden ml-16 rotato h-full" :class="sidebar ? 'w-90' : 'w-6'">
-          <div class="absolute top-0 left-0 w-90 px-4 flex flex-col items-start" v-if="sidebar">
+        <div class="fixed top-0 left-0 bg-white shadow flex flex-col items-center overflow-x-hidden ml-16 rotato h-full" :class="sidebar ? 'w-72' : 'w-6'">
+          <div class="absolute top-0 left-0 w-72 px-4 flex flex-col items-start" v-if="sidebar">
             <div class="w-full flex flex-col bg-blue-100 border rounded border-blue-200 items-start px-4 py-2 my-2">
               <p class="text-xs py-2 text-left">Add tags to your cards to organize them by concept, lecture, etc.</p>
               <p class="text-xs text-left cursor-pointer hover:underline text-blue-700">Learn more here</p>
 
             </div>
-            <div class="flex flex-col items-start w-full">
-              <p class="text-sm uppercase font-bold text-gray-700 py-2">Tags</p>
+            <div class="flex flex-col items-stretch w-full">
+              <p class="text-sm uppercase font-bold text-gray-700 text-left py-2">Tags</p>
               
-              <div v-for="(tag,ind) in tags" :key="ind+20" class="w-full select-none flex flex-col items-stretch" :class="ind!=0 ? 'mt-6' : ''">
+              <div v-for="(tag,ind) in tags" :key="ind+20" class="select-none flex flex-col items-stretch" :class="ind!=0 ? 'mt-6' : ''">
                 <TagDropDown :tag="tag" :depth="1"/>
               </div>
 
             </div>
           </div>
         </div>
-        <div class="flex flex-col w-full rotato" :class="sidebar ? ['ml-72', 'pl-32'] : ['ml-2', 'pl-24']">
-          <ListViewCardGroup v-for="(cardGroup, ind) in cards" :key="1000+ind" :cardGroup="cardGroup" />
-
-        </div>
+        
     </div>
   </div>
 </template>
