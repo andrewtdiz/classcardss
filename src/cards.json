@@ -1,0 +1,43 @@
+{
+    "decks": [{
+        "name": "Deck 1",
+        "cards": [
+            { "fingers" : [
+                {"front": "The muscularis externa of the gut wall consists of an inner circular and an outer longitudinal muscle layer",
+                "back": "this is the back of the card0",
+                "id": 0},
+                {"front": "The inner circular and an outer longitudinal muscle layer are components of the muscularis externa of the gut wall",
+                "back": "this is the back of the card1",
+                "id": 1}
+            ] },
+            { "fingers" : [
+                {"front": "Secretin is released by S cells of the duodenum",
+                "back": "this is the back of the card2",
+                "id": 2},
+                {"front": "The S cells of the duodenum release Secretin",
+                "back": "this is the back of the card3",
+                "id": 3}
+            ] }
+    ] },
+    {
+        "name": "Deck 2",
+        "cards": [
+            { "fingers" : [ 
+                {"front": "Cholecystokinin (CCK) is secreted from I cells in the duodenum and the jejunum",
+                "back": "this is the back of the card4",
+                "id": 4 },
+                {"front": "I cells in the duodenum and the jejunum are responsible for releasing Cholecystokinin (CCK)",
+                "back": "this is the back of the card5",
+                "id": 5 }
+            ] },
+            { "fingers" : [ 
+                {"front": "One function of gastrin is to increase growth of gastric mucosa and parietal cells",
+                "back": "this is the back of the card6",
+                "id": 6 },
+                {"front": "Gastrin is responsible for increasing the growth of gastric mucosa and parietal cells",
+                "back": "this is the back of the card7",
+                "id": 7 }
+            ] }
+        ]
+    }]
+}

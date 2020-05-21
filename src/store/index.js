@@ -6,6 +6,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     modalValue: '',
+    dashMode: 'List',
+    deckActive: {
+      name: 'Zanki Step 1',
+      icon: 'bg-green-500',
+    },
     tags: [{
       name: 'Biochemistry',
       tags: [{
@@ -80,7 +85,16 @@ export default new Vuex.Store({
     },
     getTags (state) {
       return state.tags
-    }
+    },
+    getDashMode (state) {
+      return state.dashMode
+    },
+    getDeckActiveIcon (state) {
+      return state.deckActive.icon
+    },
+    getDeckActiveName (state) {
+      return state.deckActive.name
+    },
   },
   mutations: {
     setModalValue (state, val) {
@@ -96,7 +110,10 @@ export default new Vuex.Store({
     },
     setCardDeleting (state, val) {
       state.cardDeleting = val
-    }
+    },
+    setDashMode (state, val) {
+      state.dashMode = val
+    },
   },
   actions: {
   },

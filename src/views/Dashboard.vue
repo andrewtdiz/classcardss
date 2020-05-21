@@ -12,143 +12,13 @@
           <ListViewCardGroup v-for="(cardGroup, ind) in cards" :key="1000+ind" :cardGroup="cardGroup" />
 
         </div>
-        <div class="fixed top-0 left-0 bg-white w-full h-16">
-          <div class="flex-1 flex items-end h-full pl-16 rotato z-10" :class="!sidebar ? 'ml-14' : 'ml-96'">
-            <div class="cursor-pointer rounded hover:bg-gray-300 mb-1">
-              <p class=" text-xl text-gray-800 px-4 py-1">Zanki Step 1</p>
-            </div>
-            <div class="ml-16 flex items-center justify-center rounded-t cursor-pointer" :class="mode=='list' ? ['text-gray-700', 'bg-gray-200','shadow-inner'] : ['text-gray-500', 'hover:text-gray-700', 'hover:bg-gray-200']">
-              
-              
-            <svg class="fill-current ml-3 mr-1 my-2 w-6 h-6" x="0px" y="0px" 
-              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; transform: translateY(-2px)" xml:space="preserve">
-              <g>
-                <g>
-                  <path d="M251.328,196.704c-6.24-6.24-16.384-6.272-22.656-0.032L176,249.376l-20.672-20.704c-6.24-6.24-16.384-6.24-22.624,0
-                    s-6.24,16.384,0,22.624l32,32c3.104,3.136,7.2,4.704,11.296,4.704s8.192-1.568,11.328-4.672l64-64
-                    C257.568,213.088,257.568,202.944,251.328,196.704z"/>
-                </g>
-              </g>
-              <g>
-                <g>
-                  <path d="M251.328,324.704c-6.24-6.24-16.384-6.272-22.656-0.032L176,377.376l-20.672-20.672c-6.24-6.24-16.384-6.24-22.624,0
-                    s-6.24,16.384,0,22.624l32,32c3.104,3.104,7.2,4.672,11.296,4.672s8.192-1.568,11.328-4.672l64-64
-                    C257.568,341.088,257.568,330.944,251.328,324.704z"/>
-                </g>
-              </g>
-              <g>
-                <g>
-                  <path d="M368,224h-64c-8.832,0-16,7.168-16,16c0,8.832,7.168,16,16,16h64c8.832,0,16-7.168,16-16C384,231.168,376.832,224,368,224
-                    z"/>
-                </g>
-              </g>
-              <g>
-                <g>
-                  <path d="M368,352h-64c-8.832,0-16,7.168-16,16c0,8.832,7.168,16,16,16h64c8.832,0,16-7.168,16-16C384,359.168,376.832,352,368,352
-                    z"/>
-                </g>
-              </g>
-              <g>
-                <g>
-                  <path d="M416,64h-64V48c0-8.832-7.168-16-16-16h-34.72C294.656,13.376,276.864,0,256,0s-38.656,13.376-45.28,32H176
-                    c-8.832,0-16,7.168-16,16v16H96c-17.632,0-32,14.368-32,32v384c0,17.632,14.368,32,32,32h320c17.632,0,32-14.368,32-32V96
-                    C448,78.368,433.632,64,416,64z M192,64h32c8.832,0,16-7.168,16-16c0-8.832,7.168-16,16-16c8.832,0,16,7.168,16,16
-                    c0,8.832,7.168,16,16,16h32v32H192V64z M416,480H96V96h64v16c0,8.832,7.168,16,16,16h160c8.832,0,16-7.168,16-16V96h64V480z"/>
-                </g>
-              </g>
-            </svg>
+        <DashboardSideBar class="z-10" :sidebar="sidebar" />
 
-              <p class="text-md font-normal px-3" :class="mode=='list' ? 'text-gray-800' : ''">List</p>
-
-            </div>
-            <div class="flex items-center justify-center rounded-t text-gray-500 hover:text-gray-600 cursor-pointer" :class="mode=='cards' ? ['text-gray-700', 'bg-gray-200','shadow-inner'] : ['text-gray-500', 'hover:text-gray-700', 'hover:bg-gray-200']">
-              <svg class="fill-current ml-3 mr-1 my-2 w-6 h-6" x="0px" y="0px"
-                viewBox="0 0 26.001 26.001" style="enable-background:new 0 0 26.001 26.001;" xml:space="preserve">
-                <g>
-                  <path d="M25.911,17.597c0.229,0.503,0.007,1.096-0.496,1.324l-11,5c-0.131,0.06-0.272,0.09-0.414,0.09
-                    c-0.099,0-0.198-0.015-0.294-0.044l-13-4c-0.528-0.163-0.824-0.723-0.662-1.25c0.162-0.528,0.723-0.827,1.25-0.662l12.638,3.889
-                    l10.654-4.843C25.095,16.868,25.684,17.096,25.911,17.597z M13.933,17.944L1.295,14.055c-0.527-0.165-1.087,0.134-1.25,0.662
-                    c-0.163,0.527,0.134,1.087,0.662,1.25l13,4c0.096,0.029,0.195,0.044,0.294,0.044c0.142,0,0.283-0.03,0.414-0.09l11-5
-                    c0.503-0.229,0.725-0.821,0.496-1.324c-0.228-0.501-0.816-0.726-1.324-0.496L13.933,17.944z M0.002,11.061
-                    c-0.021-0.42,0.223-0.808,0.61-0.972l7.301-3.077C9.35,6.406,10.034,5.65,10.034,2.99c0-0.307,0.141-0.598,0.383-0.787
-                    c0.242-0.19,0.557-0.257,0.856-0.184l12.939,3.188c0.446,0.11,0.761,0.511,0.761,0.971V6.33c0.001,2.958,0.002,4.911-3.621,6.438
-                    c-2.425,1.022-6.88,3.125-6.924,3.147c-0.134,0.064-0.281,0.096-0.427,0.096c-0.099,0-0.198-0.015-0.294-0.044l-13-4
-                    C0.305,11.843,0.023,11.481,0.002,11.061z M3.924,10.864l10,3.078c1.112-0.523,4.562-2.136,6.65-3.016
-                    c2.211-0.932,2.385-1.649,2.397-3.964l-10.99-2.709c-0.193,2.052-0.971,3.624-3.29,4.602L3.924,10.864z"/>
-                </g>
-              </svg>
-
-              <p class="text-md font-normal px-3" :class="mode=='cards' ? 'text-gray-800' : ''">Cards</p>
-
-            </div>
-
-            <div class="flex items-center justify-center rounded-t text-gray-500 hover:text-gray-600 cursor-pointer" :class="mode=='chat' ? ['text-gray-700', 'bg-gray-200','shadow-inner'] : ['text-gray-500', 'hover:text-gray-700', 'hover:bg-gray-200']">
-              
-              <svg class="fill-current ml-3 mr-1 my-2 w-6 h-6" x="0px" y="0px"
-                width="356.484px" height="356.484px" viewBox="0 0 356.484 356.484" style="enable-background:new 0 0 356.484 356.484;"
-                xml:space="preserve">
-              <g>
-                <g>
-                  <path d="M293.984,7.23H62.5C28.037,7.23,0,35.268,0,69.731v142.78c0,34.463,28.037,62.5,62.5,62.5l147.443,0.001l70.581,70.58
-                    c2.392,2.393,5.588,3.662,8.842,3.662c1.61,0,3.234-0.312,4.78-0.953c4.671-1.934,7.717-6.49,7.717-11.547v-62.237
-                    c30.759-3.885,54.621-30.211,54.621-62.006V69.731C356.484,35.268,328.447,7.23,293.984,7.23z M331.484,212.512
-                    c0,20.678-16.822,37.5-37.5,37.5h-4.621c-6.903,0-12.5,5.598-12.5,12.5v44.064l-52.903-52.903
-                    c-2.344-2.345-5.522-3.661-8.839-3.661H62.5c-20.678,0-37.5-16.822-37.5-37.5V69.732c0-20.678,16.822-37.5,37.5-37.5h231.484
-                    c20.678,0,37.5,16.822,37.5,37.5V212.512z"/>
-                  <path d="M270.242,95.743h-184c-6.903,0-12.5,5.596-12.5,12.5c0,6.903,5.597,12.5,12.5,12.5h184c6.903,0,12.5-5.597,12.5-12.5
-                    C282.742,101.339,277.146,95.743,270.242,95.743z"/>
-                  <path d="M270.242,165.743h-184c-6.903,0-12.5,5.596-12.5,12.5s5.597,12.5,12.5,12.5h184c6.903,0,12.5-5.597,12.5-12.5
-                    S277.146,165.743,270.242,165.743z"/>
-                </g>
-              </g>
-              </svg>
-              <p class="text-md font-normal px-3" :class="mode=='chat' ? 'text-gray-800' : ''">Chat</p>
-            </div>
-            <div class="flex items-center justify-center rounded-t text-gray-500 hover:text-gray-600 cursor-pointer" :class="mode=='chat' ? ['text-gray-700', 'bg-gray-200','shadow-inner'] : ['text-gray-500', 'hover:text-gray-700', 'hover:bg-gray-200']">
-              <svg class="fill-current ml-3 mr-1 my-2 w-6 h-6" x="0px" y="0px"
-            viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
-                <g>
-                  <g>
-                    <path d="M421.649,90.317L336.316,4.983c-1.589-1.593-3.481-2.852-5.564-3.703c-2.059-0.841-4.261-1.276-6.485-1.28H102.4
-                      C74.123,0,51.2,22.923,51.2,51.2v375.467c0,28.277,22.923,51.2,51.2,51.2h273.067c28.277,0,51.2-22.923,51.2-51.2V102.4
-                      C426.643,97.87,424.841,93.531,421.649,90.317z M341.333,58.266l27.068,27.068h-27.068V58.266z M392.533,426.667
-                      c0,9.426-7.641,17.067-17.067,17.067H102.4c-9.426,0-17.067-7.641-17.067-17.067V51.2c0-9.426,7.641-17.067,17.067-17.067h204.8
-                      V102.4c0,9.426,7.641,17.067,17.067,17.067h68.267V426.667z"/>
-                  </g>
-                </g>
-              </svg>
-              <p class="text-md font-normal px-3" :class="mode=='docs' ? 'text-gray-800' : ''">
-                Docs
-              </p>
-            </div>
-
-            <div class="flex items-center justify-center rounded-t text-gray-500 hover:text-gray-600 cursor-pointer"
-            :class="mode=='chat' ? ['text-gray-700', 'bg-gray-200','shadow-inner'] : ['text-gray-500', 'hover:text-gray-700', 'hover:bg-gray-200']">
-              <svg class="fill-current ml-3 mr-1 my-2 w-6 h-6" x="0px" y="0px"
-                viewBox="0 0 478.075 478.075" style="enable-background:new 0 0 478.075 478.075; transform: translateY(1px)" xml:space="preserve">
-              <g>
-                <g>
-                  <path d="M454.688,22.9h-196.3v-3c0-11-9-19.9-19.9-19.9s-19.9,9-19.9,19.9v3h-195.3c-11,0-19.9,9-19.9,19.9v276.9
-                    c0,11,9,19.9,19.9,19.9h181.2l-59.7,109.2c-5,9-2,21.9,8,26.9c9,5,21.9,2,26.9-8l59.8-109.3l59.8,109.3c5,10,16.9,13,26.9,8
-                    s13-16.9,8-26.9l-59.7-109.2h179.3c12,0,20.9-9,20.9-19.9V42.9C474.588,31.9,465.588,22.9,454.688,22.9z M434.788,299.9h-391.6
-                    V62.8h391.5v237.1H434.788z"/>
-                </g>
-              </g>
-              </svg>
-              <p class="text-md font-normal px-3" :class="mode=='slides' ? 'text-gray-800' : ''">
-                Slides
-              </p>
-            </div>
-
-          
-
-
-          </div>
-        </div>
+        <DashboardHeader :sidebar="sidebar"/>
         <div class="fixed top-0 left-0 bg-blue-900 select-none overflow-x-hidden flex flex-col items-start rotato h-full z-10 w-16" > 
             <div class="flex justify-center py-4 w-full hover:bg-blue-800 cursor-pointer">
-              <div class="h-8 w-8 flex justify-center items-center bg-green-500 rounded">
-                <p class="text-white"> Z </p>
+              <div class="h-8 w-8 flex justify-center items-center rounded" :class="activeDeck.icon">
+                <p class="text-white"> {{activeDeck.name.slice(0,2)}} </p>
               </div>
             </div>
             <div class="flex justify-center w-full hover:bg-blue-800 cursor-pointer">
@@ -208,23 +78,7 @@
 
             </div>
         </div>
-        <div class="fixed top-0 left-0 bg-white shadow flex flex-col items-center overflow-x-hidden ml-16 rotato h-full" :class="sidebar ? 'w-72' : 'w-6'">
-          <div class="absolute top-0 left-0 w-72 px-4 flex flex-col items-start" v-if="sidebar">
-            <div class="w-full flex flex-col bg-blue-100 border rounded border-blue-200 items-start px-4 py-2 my-2">
-              <p class="text-xs py-2 text-left">Add tags to your cards to organize them by concept, lecture, etc.</p>
-              <p class="text-xs text-left cursor-pointer hover:underline text-blue-700">Learn more here</p>
-
-            </div>
-            <div class="flex flex-col items-stretch w-full">
-              <p class="text-sm uppercase font-bold text-gray-700 text-left py-2">Tags</p>
-              
-              <div v-for="(tag,ind) in tags" :key="ind+20" class="select-none flex flex-col items-stretch" :class="ind!=0 ? 'mt-6' : ''">
-                <TagDropDown :tag="tag" :depth="1"/>
-              </div>
-
-            </div>
-          </div>
-        </div>
+        
         
     </div>
   </div>
@@ -232,12 +86,14 @@
 
 <script>
 import ListViewCardGroup from '../components/ListViewCardGroup.vue'
-import TagDropDown from '../components/tagdropdown.vue'
+import DashboardHeader from '../components/dashboard/dashboardheader.vue'
+import DashboardSideBar from '../components/dashboard/dashboardsidebar.vue'
 
 export default {
   components: {
     ListViewCardGroup,
-    TagDropDown
+    DashboardHeader,
+    DashboardSideBar
   },
   data () {
     return {
@@ -260,10 +116,13 @@ export default {
     cards () {
       return this.$store.getters.getCards
     },
-    tags () {
-      window.console.log(this.$store.getters.getTags)
-      return this.$store.getters.getTags
-    }
+    
+    dashMode () {
+      return this.$store.getters.dashMode 
+    },
+    activeDeck () {
+      return {name: this.$store.getters.getDeckActiveName, icon: this.$store.getters.getDeckActiveIcon}
+    },
   }
 }
 </script>

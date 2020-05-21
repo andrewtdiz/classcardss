@@ -1,0 +1,25 @@
+[debug] [2020-05-18T06:07:01.526Z] ----------------------------------------------------------------------
+[debug] [2020-05-18T06:07:01.528Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\atd68\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-05-18T06:07:01.528Z] CLI Version:   8.2.0
+[debug] [2020-05-18T06:07:01.528Z] Platform:      win32
+[debug] [2020-05-18T06:07:01.528Z] Node Version:  v10.14.2
+[debug] [2020-05-18T06:07:01.529Z] Time:          Mon May 18 2020 02:07:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-18T06:07:01.530Z] ----------------------------------------------------------------------
+[debug] [2020-05-18T06:07:01.530Z] 
+[debug] [2020-05-18T06:07:01.539Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-18T06:07:01.540Z] > authorizing via signed-in user
+[debug] [2020-05-18T06:07:01.540Z] [iam] checking project classcards2 for permissions ["firebase.projects.get"]
+[debug] [2020-05-18T06:07:01.543Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/classcards2:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-18T06:07:01.739Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 18 May 2020 06:07:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=137","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-18T06:07:01.740Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/classcards2  
+ 
+[debug] [2020-05-18T06:07:01.882Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 18 May 2020 06:07:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\atd68\Desktop\classcards'...
+[info] 
+[debug] [2020-05-18T06:07:01.885Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/classcards2/webApps/-/config  
+ 
+[debug] [2020-05-18T06:07:02.194Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 18 May 2020 06:07:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: dist
+[info] +  hosting: Local server: http://localhost:5000
