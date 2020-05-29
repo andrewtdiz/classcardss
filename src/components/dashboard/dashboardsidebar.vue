@@ -4,6 +4,7 @@
             enter-active-class="__animated "
         >
         <div class="absolute top-0 left-0 w-72 px-4 flex flex-col items-start" v-if="sidebarDelay">
+        </div>
         </transition>
         <div class="w-full flex flex-col bg-blue-100 border rounded border-blue-200 items-start px-4 py-2 my-2">
             <p class="text-xs py-2 text-left">Add tags to your cards to organize them by concept, lecture, etc.</p>
