@@ -1,7 +1,7 @@
 <template>
-  <div class="rounded-md w-full mb-8 bg-white flex flex-col overflow-hidden shadow"
+  <div class="rounded-md w-full mb-8 bg-white flex flex-col overflow-hidden"
   :class="dropdown ? 'max-h-10' : 'max-h-full'" >
-    <div class="flex cursor-pointer items-stretch hover:bg-gray-100 py-2 relative" @click="dropdown = !dropdown"
+    <div class="flex cursor-pointer items-stretch py-2 relative bg-gray-300" @click="dropdown = !dropdown"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false">
       <div  :style="{left: dropdown ? '1rem' : '0.75rem'}" class="rotato absolute h-full -mt-2 flex justify-center items-center rounded px-1 text-gray-900 hover:text-gray-700 cursor-pointer z-1"
@@ -30,6 +30,28 @@
           </g>
         </g>
         </svg>
+      </div>
+    </div>
+    <div class="flex items-basline ml-10 pl-3 select-none my-2">
+      <div class="flex-1 flex items-baseline h-full relative" style="font-family: Whitney, Helvetica, Arial, sans-serif;">
+          
+          <div class="flex-1 w-96 text-xxs text-gray-500 uppercase font-semibold flex items-baseline my-auto overflow-hidden" 
+          >
+              <p class="specialtext">FRONT</p>
+          </div>
+          <div class="w-48 pl-5 text-xxs text-gray-500 uppercase font-semibold flex items-baseline my-auto overflow-hidden" 
+          >
+              <p class="specialtext">BACK</p>
+          </div>
+      </div>
+      <div class="flex pl-8 justify-center items-center h-full w-32">
+          <p class="text-white text-xxs specialtext uppercase font-semibold">STATUS</p>
+      </div>
+      <div class="flex pl-10 justify-center items-center h-full w-32">
+          <p class=" text-xxs specialtext uppercase font-semibold">LAST VIEWED</p>
+      </div>
+      <div class="flex justify-center pl-8 items-center h-full w-32">
+          <p class=" text-xxs specialtext uppercase font-semibold">COMMENTS</p>
       </div>
     </div>
     <div class="flex w-full items-center flex-col">
@@ -63,6 +85,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.specialtext {
+  color: rgba(119,119,119,0.8);
+}
+
 h3 {
   margin: 40px 0 0;
 }

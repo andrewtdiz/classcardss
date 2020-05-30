@@ -4,7 +4,7 @@
         :class="dashMode==tabName ? 'header-tab-selected' : ''"
       >
         <slot> </slot>
-        <p class="header-tab-text" :class="dashMode=='slides' ? 'text-gray-800' : ''">{{tabName}}</p>
+        <p class="header-tab-text" :class="dashMode=='slides' ? 'text-gray-900' : 'text-gray-700'">{{tabName}}</p>
       </div>
 </template>
 
@@ -23,7 +23,6 @@ export default {
     },
     methods: {
         changeDashMode() {
-            window.console.log('hellooo')
             this.$store.commit('setDashMode', this.tabName)
         },
     }

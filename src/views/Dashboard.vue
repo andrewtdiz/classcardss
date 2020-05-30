@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col max-h-screen overflow-x-hidden overflow-y-hidden" style="background: #e3e6ed">
+  <div class="flex flex-col max-h-screen overflow-x-hidden overflow-y-hidden" style="max-width: 100vw">
     <!-- <div class="flex justify-center items-stretch my-2" style="padding-bottom: 2px;">
       <div class="flex items-center rounded" >
         <input @keydown.enter="sendCard" ref="inp" style="margin: 2px;" :class="inputText!='' ? '' : 'shadow-inner'" v-model="inputText" 
@@ -7,13 +7,46 @@
       </div>
       <button @click="sendCard" class="inputborder cursor-pointer px-4 focus:outline-none py-2 text-sm ml-4 bg-white border focus:border-blue-500 appearance-none rounded-md border-gray-300 hover:border-gray-400">Submit</button>
     </div> -->
-    <div class="max-h-screen max-w-screen overflow-x-hidden h-screen w-screen flex justify-center px-6 pt-12 mt-16" >
-        <div class="mt-20 absolute top-0 left-0 flex flex-col z-1 rotato" :class="sidebar ? ['ml-72', 'pl-32'] : ['ml-2', 'pl-24']">
+    <div class="max-h-screen max-w-screen overflow-y-scroll  overflow-x-hidden h-screen w-screen flex justify-center px-6" style="max-width: 100vw">
+        
+        <DashboardSideBar class="z-10" :sidebar="sidebar" />
+        
+        <div v-if="dashMode=='Home'" class="absolute top-0 left-0 flex flex-col z-0 rotato overflow-x-hidden pt-24" :class="sidebar ? ['pl-104'] : ['ml-2', 'pl-24']" >
           <ListViewCardGroup v-for="(cardGroup, ind) in cards" :key="1000+ind" :cardGroup="cardGroup" />
 
         </div>
-        <DashboardSideBar class="z-10" :sidebar="sidebar" />
 
+        <div v-if="dashMode=='Browse'" class="absolute top-0 left-0 flex flex-col z-0 rotato overflow-x-hidden pt-24" :class="sidebar ? ['pl-104'] : ['ml-2', 'pl-24']" >
+          <div class="flex items-basline ml-10 pl-3 select-none my-2">
+            <div class="flex-1 flex items-baseline h-full relative" style="font-family: Whitney, Helvetica, Arial, sans-serif;">
+                
+                <div class="flex-1 w-96 text-xxs text-gray-500 uppercase font-semibold flex items-baseline my-auto overflow-hidden"  style="color: #8e9297"
+                >
+                    <p class="specialtext">FRONT</p>
+                </div>
+                <div class="w-48 pl-5 text-xxs text-gray-500 uppercase font-semibold flex items-baseline my-auto overflow-hidden"  style="color: #8e9297"
+                >
+                    <p class="specialtext">BACK</p>
+                </div>
+            </div>
+            <div class="flex pl-8 justify-center items-center h-full w-32">
+                <p class="text-white text-xxs text-gray-500 uppercase font-semibold" style="color: #8e9297">STATUS</p>
+            </div>
+            <div class="flex pl-10 text-gray-900 hover:text-gray-500 hover:bg-gray-100 justify-center items-center h-full w-32">
+                <p class=" text-xxs text-gray-500 uppercase font-semibold" style="color: #8e9297">LAST VIEWED</p>
+            </div>
+            <div class="flex justify-center pl-8 text-gray-900 hover:text-gray-500 hover:bg-gray-100 items-center h-full w-32">
+                <p class=" text-xxs text-gray-500 uppercase font-semibold" style="color: #8e9297">COMMENTS</p>
+            </div>
+          </div>
+          <div v-for="(cardGroup, ind) in cards" :key="1000+ind" >
+            
+            <div class="flex w-full items-center flex-col">
+              <ListViewCardTwo v-for="(card, ind) in cardGroup.cards" :key="ind" :cardGroupColor="cardGroup.color" :card="card"/>
+            </div>
+          </div>
+
+        </div>
         <DashboardHeader :sidebar="sidebar"/>
         <div class="fixed top-0 left-0 bg-blue-900 select-none overflow-x-hidden flex flex-col items-start rotato h-full z-10 w-16" > 
             <div class="flex justify-center py-4 w-full hover:bg-blue-800 cursor-pointer">
@@ -88,12 +121,15 @@
 import ListViewCardGroup from '../components/ListViewCardGroup.vue'
 import DashboardHeader from '../components/dashboard/dashboardheader.vue'
 import DashboardSideBar from '../components/dashboard/dashboardsidebar.vue'
+import ListViewCardTwo from '../components/listviewcardtwo.vue'
+
 
 export default {
   components: {
     ListViewCardGroup,
     DashboardHeader,
-    DashboardSideBar
+    DashboardSideBar,
+    ListViewCardTwo
   },
   data () {
     return {
@@ -110,7 +146,7 @@ export default {
     },
     isFocused () {
       this.isFocus = true
-    }
+    },
   },
   computed: {
     cards () {
@@ -118,7 +154,7 @@ export default {
     },
     
     dashMode () {
-      return this.$store.getters.dashMode 
+      return this.$store.getters.getDashMode 
     },
     activeDeck () {
       return {name: this.$store.getters.getDeckActiveName, icon: this.$store.getters.getDeckActiveIcon}

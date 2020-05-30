@@ -1,7 +1,9 @@
 <template>
-  <div id="app" >
+  <div id="app" style="font-family: Whitney, Helvetica, Arial, sans-serif;" >
     <Modal v-if="modalValue!=''">
-      <DeleteWindow v-if="modalValue=='delete'" />
+      
+        <DeleteWindow v-if="modalValue=='delete'" />
+        <CardWindow v-else-if="modalValue=='card'" />
     </Modal>
     <router-view/>
   </div>
@@ -10,11 +12,13 @@
 <script>
 import Modal from './components/modal.vue'
 import DeleteWindow from './components/deletewindow.vue'
+import CardWindow from './components/cardwindow.vue'
 
 export default {
   components: {
     Modal,
-    DeleteWindow
+    DeleteWindow,
+    CardWindow
   },
   computed: {
     modalValue () {
@@ -24,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

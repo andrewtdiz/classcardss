@@ -1,14 +1,14 @@
 <template>
     <div class="flex flex-col items-stretch w-full" >
-        <div class="relative w-full flex py-1  border-b border-gray-200 pr-2 items-center hover:bg-gray-100 text-gray-700 hover:text-gray-900 rounded cursor-pointer" 
-        :class="'pl-' + (6*(depth-1)+2)">
+        <div @mouseenter="hovering = true" @mouseleave="hovering = false" class="relative flex py-1 hover:bg-gray-200 border-b border-gray-200 pr-2 items-center hover:bg-gray-100 text-gray-700 hover:text-gray-900 rounded cursor-pointer" 
+        :class="'ml-' + (6*(depth-1)+2)">
             
-            <div class="absolute left-0 top-0 h-full bg-transparent w-3 z-10 -ml-4 pointer-events-none" :class="'pl-' + (6*(depth)-2)">
-                <div class="w-6 h-full pointer-events-auto" @click="dropTag = !dropTag" >
+            <div class="absolute left-0 top-0 h-full bg-transparent w-3 z-10 pointer-events-none" @click="dropTag = !dropTag">
+                <div class="w-6 h-full pointer-events-auto">
 
                 </div>
             </div>
-            <svg v-if="isTagDefined" class="rotato w-3 h-3 fill-current" x="0px" y="0px" :class="dropTag ? 'rotate-90' : ''"
+            <svg v-if="isTagDefined" class="ml-1 rotato w-3 h-3 fill-current" x="0px" y="0px"  @click="dropTag = !dropTag"  :class="dropTag ? 'rotate-90' : ''"
                 viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
                 <g>
                 <g>
@@ -19,12 +19,13 @@
                 </g>
                 </g>
             </svg>
-            <div v-else class="h-3 w-3">
+            <div v-else class="ml-1 h-3 w-3">
 
             </div>
 
-            <p class="text-sm ml-4 py-1">{{tag.name}}</p>
+            <p  class="text-sm ml-2 px-2 rounded py-1">{{tag.name}}</p>
             
+            <p :class="hovering ? 'text-gray-600' : 'text-white'" class="ml-auto hover:text-black text-xs">edit</p>
         </div>
         <div v-if="isTagDefined && dropTag" class="w-full flex flex-col">
             <div  v-for="(tag,ind) in tag.tags" :key="ind+40" class="flex flex-col">
@@ -43,6 +44,7 @@ export default {
     props: ['tag', 'depth'],
     data() { 
         return {
+            hovering: false,
             dropTag: false,
         }
     },
