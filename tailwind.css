@@ -7,7 +7,11 @@
 }
 
 .btn-blue {
-    @apply bg-blue-500 text-white
+    @apply bg-blue-500 text-white transition duration-500 ease-in-out;
+}
+
+.btn-blue:hover {
+    @apply bg-blue-600;
 }
 
 .header-tab {
@@ -31,4 +35,19 @@
 }
 
 
+.inpt {
+    @apply border py-2 px-2  appearance-none outline-none border-gray-300 rounded;
+}
+
+.inpt:hover {
+    @apply border-gray-400;
+}
+
+.inpt:focus {
+    @apply border-brand-500;
+}
+
+.bg-dashboard {
+    @apply bg-brand-500;
+}
 @tailwind utilities; 

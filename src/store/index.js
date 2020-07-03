@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    dropDown: '',
+    display: '',
     modalValue: '',
     cardDeleting: -1,
     cardSelected: -1,
@@ -88,9 +90,149 @@ export default new Vuex.Store({
         ]
       }
     ],
-    
+    routes: [
+      {
+          name: 'Features',
+          vals: [
+              {
+                  name: 'Cards',
+                  link: '/cards',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Decks',
+                  link: '/decks',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Study Sessions',
+                  link: '/studysessions',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Groups',
+                  link: '/groups',
+                  desc: 'Lorem ipsum simet dolor',
+              }
+          ],
+      },
+      {
+          name: 'Students',
+          vals: [
+              {
+                  name: 'Making Cards',
+                  link: '/makingcards',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Studying',
+                  link: '/studying',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Interface',
+                  link: '/interface',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Customization',
+                  link: '/settings',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Teams',
+                  link: '/teams',
+                  desc: 'Lorem ipsum simet dolor',
+              }
+          ],
+      },
+      {
+          name: 'Educators',
+          vals: [
+              {
+                  name: 'Making Cards',
+                  link: '/makingcards',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Studying',
+                  link: '/studying',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Interface',
+                  link: '/interface',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Customization',
+                  link: '/settings',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Pre-K to Elementary',
+                  link: '/teams',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Grades 6-8',
+                  link: '/teams',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Grades 8-12',
+                  link: '/teams',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'College and Graduate',
+                  link: '/teams',
+                  desc: 'Lorem ipsum simet dolor',
+              }
+          ],
+      },
+      {
+          name: 'Company',
+          vals: [
+              {
+                  name: 'About Us',
+                  link: '/aboutus',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Careers',
+                  link: '/careers',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Our Team',
+                  link: '/team',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Press',
+                  link: '/press',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Legal',
+                  link: '/legal',
+                  desc: 'Lorem ipsum simet dolor',
+              }
+          ],
+      },
+  ]
   },
   getters: {
+    getDisplay(state) {
+      return state.display
+    },
+    getDropDown(state) {
+      return state.dropDown
+    },
+    getRoutes(state) {
+      return state.routes
+    },
     getModalValue (state) {
       return state.modalValue
     },
@@ -130,6 +272,12 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    setDisplay(state, val) {
+      state.display = val
+    },
+    setDropDown(state,val) {
+      state.dropDown = val
+    },
     setModalValue (state, val) {
       state.modalValue = val
     },

@@ -1,28 +1,96 @@
 <template>
-  <div class="home flex flex-col mt-16 relative">
+  <div class="home flex flex-col relative">
     <NavBar />
-    <div class="bg-blue-500 flex h-full justify-center items-center" style="height: 70vh">
-      <div class="h-full container flex flex-col justify-center mt-8 lg:mt-0 lg:justify-around lg:flex-row items-center">
-          <div class="lg:w-1/2 w-full -mt-8 flex flex-col items-center">
-              <p class="text-white text-4xl md:text-5xl font-bold text-center lg:text-left leading-tight lg:mr-auto">A whole lot more <br> than just flashcards.</p>
-              <p class="text-white text-xl w-full font-normal mt-6 text-center lg:text-left leading-tight">ClassCards is built to provide structure, organization, and collaboration to your studying.</p>
+    <div class="mt-16 flex h-full justify-center items-center relative" style="height: 60vh">
+      <div class="absolute right-0 top-0 h-full w-1/3 bg-brand-400 m-4 rounded-lg"></div>
+      <div class="h-full container flex flex-col justify-center lg:mt-0 lg:justify-around lg:flex-row items-start">
+          <div class="lg:w-1/2 w-full justify-center h-full pb-6 flex flex-col items-center">
+              <p class="text-gray-800 text-4xl md:text-5xl font-bold text-center lg:text-left leading-tight lg:mr-auto">A  lot more than <br> flashcards.</p>
+              <p class="text-gray-800 text-xl w-full font-normal mt-6 text-center lg:text-left leading-tight">ClassCards is built to provide structure, organization, and collaboration to your studying.</p>
               <div class="mt-6 flex w-full lg:justify-start justify-center">
-                <div class="cursor-pointer text-gray-800 hover:text-black hover:shadow-lg shadow-md bg-white flex items-center py-3 rounded px-3 lg:px-6">
-                  <p class=" text-md">Get Started</p>
-                </div>
-                <div class=" ml-8 cursor-pointer text-blue-100 shadow-md hover:text-white border-blue-200 hover:border-white border flex items-center py-3 rounded px-3 lg:px-6">
-                  <p class=" text-md">Learn More</p>
-                </div>
+                <button class="btn btn-blue text-lg hover:bg-blue-600" >
+                  Get Started
+                </button>
               </div>
           </div>
-          <div class="hidden lg:flex flex-col items-center justify-center relative mt-20 lg:mt-16" style="width:552px; height: 337px">
-            <img class="table-svg" src="../assets/home/Table.svg" alt="">
-            <img class="screen-svg" src="../assets/home/Screen.svg" alt="">
-            <img class="apple-svg" src="../assets/home/apple.svg" alt="" >
-            <img class="coffee-svg" src="../assets/home/coffee.svg" alt="" >
-            <img class="books-svg" src="../assets/home/books.svg" alt="">
+          <div class="flex flex-col justify-center h-full relative pointer-events-none items-center flex-1 z-10">
+        <div class="absolute top-0 left-0 flex flex-col svg-shadow bg-white shadow-lg pointer-events-auto h-64 w-3/4 rounded-md z-20" style=" top: 50%; left: 50%;">
+            <div class="flex w-full items-center p-1">
+                <div class="w-3 h-3 bg-red-500 ml-1 mr-1 rounded-full">
+                </div>
+                <div class="w-3 h-3  mr-1 rounded-full" style="background: #fbbd35">
+                </div>
+                <div class="w-3 h-3 bg-green-500 mr-1 rounded-full">
+                </div>
+            </div>
+            <div class="flex-1 pt-4 px-3 flex flex-col">
+                <h1 class="my-2 text-xs text-left text-gray-600">Front</h1>            
+                <h1 class="mb-4 text-left" v-html="'The {..} is the <b>powerhouse</b> of the cell'"></h1>            
+                <h1 class="my-2 text-xs text-left text-gray-600">Back</h1>            
+                <h1 class="mb-2 text-left">The <span class="text-brand-500">Mitochondria</span> is the powerhouse of the cell.</h1>          
+            </div>
+            <div class="pt-4 px-3 flex flex-col items-center">
+            <div class="flex text-sm items-center py-2">
+                <h1 class="mx-3 bg-brand-500 text-white text-md px-2 py-1 rounded">Hard</h1>
+                <h1 class="mx-3 bg-orange-400 text-white text-md px-2 py-1 rounded">Medium</h1>
+                <h1 class="mx-3 bg-green-500 text-white text-md px-2 py-1 rounded">Easy</h1>
+
+            </div>
+            </div>
+        </div>
+
+        <div class="absolute top-0 left-0 flex flex-col svg-shadow-2 bg-white shadow-lg pointer-events-auto h-64 w-3/4 rounded-md z-10" style=" top: 51%; left: 51%;">
+            <div class="flex w-full items-center p-1">
+                <div class="w-3 h-3 bg-red-500 ml-1 mr-1 rounded-full">
+                </div>
+                <div class="w-3 h-3  mr-1 rounded-full" style="background: #fbbd35">
+                </div>
+                <div class="w-3 h-3 bg-green-500 mr-1 rounded-full">
+                </div>
+            </div>
+            <div class="flex-1 pt-4 px-3 flex flex-col">
+                <h1 class="my-2 text-xs text-gray-600">Front</h1>            
+                <h1 class="mb-4">{@html 'The {..} is the <b>powerhouse</b> of the cell'}</h1>            
+                <h1 class="my-2 text-xs text-gray-600">Back</h1>            
+                <h1 class="mb-2">The <span class="text-brand-500">Mitochondria</span> is the powerhouse of the cell.</h1>          
+            </div>
+            <div class="pt-4 px-3 flex flex-col items-center">
+            <div class="flex text-sm items-center py-2">
+                <!-- <h1 class="mx-3 bg-blue-500 text-white px-2 py-1 rounded">Hard</h1>
+                <h1 class="mx-3 bg-orange-400 text-white px-2 py-1 rounded">Medium</h1>
+                <h1 class="mx-3 bg-green-500 text-white px-2 py-1 rounded">Easy</h1> -->
+
+            </div>
+            </div>
           </div>
+          <div class="absolute top-0 left-0 flex flex-col svg-shadow-3 bg-white shadow-lg pointer-events-auto h-64 w-3/4 rounded-md z-0" style=" top: 52%; left: 52%;">
+              <div class="flex w-full items-center p-1">
+                  <div class="w-3 h-3 bg-red-500 ml-1 mr-1 rounded-full">
+                  </div>
+                  <div class="w-3 h-3  mr-1 rounded-full" style="background: #fbbd35">
+                  </div>
+                  <div class="w-3 h-3 bg-green-500 mr-1 rounded-full">
+                  </div>
+              </div>
+              <div class="flex-1 pt-4 px-3 flex flex-col">
+                  <h1 class="my-2 text-xs text-gray-600">Front</h1>            
+                  <h1 class="mb-4">{@html 'The {..} is the <b>powerhouse</b> of the cell'}</h1>            
+                  <h1 class="my-2 text-xs text-gray-600">Back</h1>            
+                  <h1 class="mb-2">The <span class="text-brand-500">Mitochondria</span> is the powerhouse of the cell.</h1>          
+              </div>
+              <div class="pt-4 px-3 flex flex-col items-center">
+              <div class="flex text-sm items-center py-2">
+                  <!-- <h1 class="mx-3 bg-blue-500 text-white px-2 py-1 rounded">Hard</h1>
+                  <h1 class="mx-3 bg-orange-400 text-white px-2 py-1 rounded">Medium</h1>
+                  <h1 class="mx-3 bg-green-500 text-white px-2 py-1 rounded">Easy</h1> -->
+
+              </div>
+              </div>
+          </div>
+
+      </div> 
       </div>
+          
       <!-- <div class="w-full lg:px-12 flex justify-center items-center h-full mt-18 flex">
         <div class="container-lg flex lg:flex-row flex-col h-full">
             <p class="text-white text-5xl font-bold text-left leading-tight mr-auto">A whole lot more <br> than just flashcards.</p>
@@ -30,12 +98,12 @@
         </div>
       </div> -->
     </div>
-    <section class="w-full flex flex-col items-center my-16">
+    <section class="w-full flex flex-col items-center my-8">
       <div class="flex flex-col items-center">
         <p class="text-5xl text-gray-800 font-bold">Trusted by educators across the world</p>
         <p class="text-lg mt-4 text-gray-900 font-medium">From elementary school to graduate-level education, ClassCards is used by hundreds <br> of companies and educators</p>
       </div>
-      <div class="container flex items-center justify-around mt-16">
+      <div class="container flex items-center justify-around mt-8">
         <img class="w-16 h-16 opacity-50 cursor-pointer hover:opacity-100" style="filter: grayscale(100%)" src="https://pbs.twimg.com/profile_images/912676696620359680/e-G5lqVs_400x400.jpg" alt="">
         <img class="w-auto hidden md:block h-12 opacity-50 cursor-pointer hover:opacity-100" src="https://image4.owler.com/logo/sketchy-group_owler_20190218_192837_original.jpg" style="filter: grayscale(100%)" alt="">
         <img class="w-auto hidden lg:block h-24 opacity-50 cursor-pointer hover:opacity-100" src="https://cdn.greenhouse.io/external_greenhouse_job_boards/logos/000/000/457/original/khan-logo_clear-bg.jpg" style="filter: grayscale(100%)" alt="">
@@ -128,86 +196,63 @@ export default {
 
 <style scoped>
 
-.table-svg {
-    position: absolute;
-    top: 23%;
-    right: 12%;
-    z-index: 3;
-    animation: tableanimation 1s ease-out;
+.svg-shadow {
+  -webkit-filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .25));
+  filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .25));
+  /* Similar syntax to box-shadow */
+  animation: float 6s ease-in-out infinite;
 }
 
-@keyframes tableanimation {
-    0% {opacity: 0.7; top: 30%}
-    75% {opacity: 0.8}
-    100% {opacity: 1; top: 23%}
+@keyframes float {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		transform: translate(-50%, calc(-50% - 25px));
+
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
 }
 
-.apple-svg {
-    position: absolute;
-    top: 25.5%;
-    left: 75%;
-    z-index: 1;
-    animation: appleanimation 1s ease-out;
+.svg-shadow-2 {
+  -webkit-filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .25));
+  filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .25));
+  /* Similar syntax to box-shadow */
+  animation: float2 6s ease-in-out infinite;
 }
 
-@keyframes appleanimation {
-    0% {opacity: 0.3; top: 15%}
-    75% {opacity: 0.5}
-    100% {opacity: 1; top: 25.5%}
+@keyframes float2 {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		transform: translate(-50%, calc(-50% - 20px));
+
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
 }
 
-.books-svg {
-    position: absolute;
-    top: 13%;
-    left: 70%;
-    animation: booksanimation 1s ease-out;
+.svg-shadow-3 {
+  -webkit-filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .25));
+  filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .25));
+  /* Similar syntax to box-shadow */
+  animation: float3 6s ease-in-out infinite;
 }
 
-@keyframes booksanimation {
-    0% {opacity: 0.3; top: 15%}
-    75% {opacity: 0.5}
-    100% {opacity: 1; top: 13%}
-}
+@keyframes float3 {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		transform: translate(-50%, calc(-50% - 15px));
 
-.coffee-svg {
-    position: absolute;
-    top: 24%;
-    left: 16%;
-    z-index: 2;
-    animation: coffeeanimation 2s;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
 }
-
-@keyframes coffeeanimation {
-    0% {opacity: 0; left: 0%}
-    35% {transform: rotate(0deg)}
-    70% {left: 16%; top: 24%}
-    75% {transform: rotate(20deg)}
-    90% {transform: rotate(0deg)}
-}
-
-.screen-svg {
-    position: absolute;
-    top: -21%;
-    left: 24%;
-    z-index: 2;
-    animation: screenanimation 1s ease-out;
-}
-
-@keyframes screenanimation {
-    0% {opacity: 0.7; top: -32%}
-    75% {opacity: 0.8}
-    100% {opacity: 1; top: -21%}
-}
-
-.fade-in-svg {
-    animation: fromtopanimation 2s ease-out;
-}
-
-@keyframes fromtopanimation {
-    0% {opacity:0}
-    100% {}
-}
-
 </style>

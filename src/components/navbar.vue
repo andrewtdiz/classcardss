@@ -1,106 +1,41 @@
 <template>
-    <div class="fixed top-0 z-10 bg-white w-full flex items-center md:items-baseline justify-center shadow ">
-      <div class="container flex items-center bg-white  md:items-baseline justify-between py-3 lg:py-1">
-        <div class="flex items-baseline bg-white ">
-            <router-link to="/">
-                <div class="flex items-center pl-8 ml-3 lg:ml-0 relative cursor-pointer">
-                    <img src="../assets/logo.svg" class="absolute left-0 w-8 h-auto" alt="">
-                    <h1 class="text-2xl text-gray-900 font-bold tracking-tight">ClassCards</h1>
-                </div>
-            </router-link>
-            <div class="lg:flex items-baseline px-6 hidden">
-                <NavLink :title="'Features'" :dropdown="featuresLinks"/>
-                <NavLink :title="'Guides'"  :dropdown="guidesLinks"/>
-                <NavLink :title="'Company'"  :dropdown="companyLinks"/>
-                <NavLink :title="'About'" :link="'/about'"/>
-            </div>
+    <div class="fixed top-0 w-screen shadow-md left-0 flex h-16 justify-center z-50 bg-white ">
+    <div class="container flex items-center h-full relative" use:links>
+        <img src="../assets/logo.png" class="h-8 w-auto mr-2 object-cover " alt="">
+
+        <div class="flex items-baseline mt-1 w-full">
+        <h1 class="text-2xl font-bold mr-6 text-gray-800"> ClassCards </h1>
+            <Navbardropdown v-for="(route, ind) in routes" :key="ind" :route="route"/>
+          
         </div>
-        <div class="hidden md:flex items-baseline justify-center">
-            <NavLink :title="'Log In'" class="mr-6 lg:mr-12" :link="'/login'"/>
-            <NavLink :title="'Sign Up'" :link="'/signup'" :isbutton="true"/>
-        </div>
-        <div class="block md:hidden flex items-baseline cursor-pointer py-2 mr-6">
-            <font-awesome-icon
-                :icon="['fas', 'bars']"
-                size="2x"
-            />
-        </div>
-        </div>
+        <router-link to="/login" class="mr-32 w-32">
+        <button  replace class="text-center navbar-text rounded py-2 px-4">
+                Log in
+        </button>
+        </router-link>
+        
+        <button class="absolute right-0 btn  hover:bg-blue-600 btn-blue" style="transform: translate(0%, -50%); top: 50%">
+            Get Started
+        </button>
     </div>
+</div>
 </template>
 
 <script>
-import NavLink from './navlink.vue'
+import Navbardropdown from './Navbardropdown.vue'
 
 export default {
   name: 'NavBar',
   components: {
-    NavLink
+    Navbardropdown
+  },
+  computed: {
+    routes() {
+      return this.$store.getters.getRoutes
+    }
   },
   data () {
     return {
-      featuresLinks: [
-        {
-          name: 'Cards',
-          link: '/cards'
-        },
-        {
-          name: 'Decks',
-          link: '/decks'
-        },
-        {
-          name: 'Study Sessions',
-          link: '/studysessions'
-        },
-        {
-          name: 'Groups',
-          link: '/groups'
-        }
-      ],
-      guidesLinks: [
-        {
-          name: 'Making Cards',
-          link: '/makingcards'
-        },
-        {
-          name: 'Studying',
-          link: '/studying'
-        },
-        {
-          name: 'Interface',
-          link: '/interface'
-        },
-        {
-          name: 'Settings & Customization',
-          link: '/settings'
-        },
-        {
-          name: 'Teacher\'s Corner',
-          link: '/teachers'
-        }
-      ],
-      companyLinks: [
-        {
-          name: 'About Us',
-          link: '/aboutus'
-        },
-        {
-          name: 'Careers',
-          link: '/careers'
-        },
-        {
-          name: 'Our Team',
-          link: '/team'
-        },
-        {
-          name: 'Press',
-          link: '/press'
-        },
-        {
-          name: 'Legal',
-          link: '/legal'
-        }
-      ]
     }
   }
 }

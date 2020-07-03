@@ -1,9 +1,10 @@
 <template>
-  <div id="app" style="font-family: Whitney, Helvetica, Arial, sans-serif;" >
+  <div id="app">
     <Modal v-if="modalValue!=''">
       
         <DeleteWindow v-if="modalValue=='delete'" />
         <CardWindow v-else-if="modalValue=='card'" />
+        <SearchWindow v-if="modalValue=='searching'" />
     </Modal>
     <router-view/>
   </div>
@@ -13,12 +14,14 @@
 import Modal from './components/modal.vue'
 import DeleteWindow from './components/deletewindow.vue'
 import CardWindow from './components/cardwindow.vue'
+import SearchWindow from './components/searchwindow.vue'
 
 export default {
   components: {
     Modal,
     DeleteWindow,
-    CardWindow
+    CardWindow,
+    SearchWindow
   },
   computed: {
     modalValue () {
@@ -28,9 +31,11 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style >
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
