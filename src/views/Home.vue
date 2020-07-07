@@ -6,9 +6,9 @@
       <div class="h-full container flex flex-col justify-center lg:mt-0 lg:justify-around lg:flex-row items-start">
           <div class="lg:w-1/2 w-full justify-center h-full pb-6 flex flex-col items-center">
               <p class="text-gray-800 text-4xl md:text-5xl font-bold text-center lg:text-left leading-tight lg:mr-auto">A  lot more than <br> flashcards.</p>
-              <p class="text-gray-800 text-xl w-full font-normal mt-6 text-center lg:text-left leading-tight">ClassCards is built to provide structure, organization, and collaboration to your studying.</p>
-              <div class="mt-6 flex w-full lg:justify-start justify-center">
-                <button class="btn btn-blue text-lg hover:bg-blue-600" >
+              <p class="text-gray-800 text-2xl w-full font-normal mt-6 text-center lg:text-left leading-tight">ClassCards is built to provide structure, organization, and collaboration to your studying.</p>
+              <div class="mt-8 flex w-full lg:justify-start justify-center">
+                <button class="btn btn-started px-6 text-xl font-normal py-3 text-lg hover:bg-green-600" >
                   Get Started
                 </button>
               </div>
@@ -98,10 +98,9 @@
         </div>
       </div> -->
     </div>
-    <section class="w-full flex flex-col items-center my-8">
+    <section class="w-full flex flex-col items-center my-8 py-4">
       <div class="flex flex-col items-center">
-        <p class="text-5xl text-gray-800 font-bold">Trusted by educators across the world</p>
-        <p class="text-lg mt-4 text-gray-900 font-medium">From elementary school to graduate-level education, ClassCards is used by hundreds <br> of companies and educators</p>
+        <p class="text-landing w-2/3">Join over 10,000 students who learn with ClassCards everyday</p>
       </div>
       <div class="container flex items-center justify-around mt-8">
         <img class="w-16 h-16 opacity-50 cursor-pointer hover:opacity-100" style="filter: grayscale(100%)" src="https://pbs.twimg.com/profile_images/912676696620359680/e-G5lqVs_400x400.jpg" alt="">
@@ -111,20 +110,114 @@
         <img class="w-16 h-16 opacity-50 cursor-pointer hover:opacity-100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/McGraw-Hill_Education_wordmark.svg/1200px-McGraw-Hill_Education_wordmark.svg.png" style="filter: grayscale(100%)" alt="">
       </div>
     </section>
-    <section class="text-gray-700 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
-            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-          </svg>
-          <p class="leading-relaxed text-lg">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.</p>
-          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
-          <p class="text-gray-500">Senior Product Designer</p>
+
+  <section class="text-gray-700 body-font">
+  <div class="container mx-auto flex px-5 py-32 md:flex-row flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+    </div>
+    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <h1 class="text-landing">A learning platform organized around you<span class="text-5xl text-brand-500">.</span> </h1>
+      <p class="mt-8 mb-6 text-2xl leading-relaxed">With ClassCards, I'm able to work in a way that suites my needs and makes studying more efficient than ever before.</p>
+      <div class="flex justify-center">
+        <div class="h-16 w-16 bg-blue-500 rounded-full shadow mr-4"> </div>
+        <div class="flex flex-col justify-center items-start">
+          <p class="font-bold">Andrew DiZenzo</p>
+          <div class="h-1 w-full"> </div>
+          <p class="font-medium ">University of Miami, 3rd year Medical Student</p>
         </div>
       </div>
-    </section>
-    <section class="text-gray-700 body-font">
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-700 body-font">
+  <div class="container mx-auto flex px-5 py-32 md:flex-row-reverse flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+    </div>
+    <div class="lg:flex-grow md:w-1/2 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <h1 class="text-landing">Memorize faster and focus on what matters<span class="text-5xl text-brand-500">.</span> </h1>
+      <p class="mt-8 mb-6 text-2xl leading-relaxed">Spaced repetition will totally changed the way teachers engage with students. Classroom time can now be dedicated to content mastery than first principles.</p>
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-700 body-font">
+  <div class="container mx-auto flex px-5 py-32 md:flex-row flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+    </div>
+    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <h1 class="text-landing">Collaborate in one shared workspace<span class="text-5xl text-brand-500">.</span> </h1>
+      <p class="mt-8 mb-6 text-2xl leading-relaxed">Share, chat, and study all on one platform with your friends and classmates.</p>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">Raw Denim Heirloom Man Braid
+      <br class="hidden sm:block">Selfies Wayfarers
+    </h1>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex">
+        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <div class="flex-grow pl-6">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
+          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland kickstarter tumblr live-edge tilde.</p>
+          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex">
+        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+          </svg>
+        </div>
+        <div class="flex-grow pl-6">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">The Catalyzer</h2>
+          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland kickstarter tumblr live-edge tilde.</p>
+          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex">
+        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="flex-grow pl-6">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Neptune</h2>
+          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland kickstarter tumblr live-edge tilde.</p>
+          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+    
+    <!-- <section class="text-gray-700 body-font">
       <div class="container py-12 mx-auto">
         <h1 class="text-5xl text-gray-800 font-bold leading-tight">Learning reimagined
         </h1>
@@ -176,10 +269,93 @@
           </div>
         </div>
       </div>
-    </section>
-    <div class="h-screen bg-white">
-      <h1></h1>
+    </section> -->
+
+<section class="text-gray-700 body-font" style="background: #f5f6f8">
+  <div class="container mx-auto flex px-5 py-32 md:flex-row-reverse flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
     </div>
+    <div class="lg:flex-grow md:w-1/2 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <h1 class="text-landing">ClassCards for studying remotely</h1>
+      <p class="mt-8 mb-6 text-2xl leading-relaxed">Study and collaborate with classmates anywhere, anytime. ClassCards even works in offline mode.</p>
+    </div>
+  </div>
+</section>
+
+
+    <section class="text-gray-700 body-font">
+    <div class="container px-5 py-32 mx-auto">
+      <div class="lg:w-3/4 flex flex-col sm:items-center items-start mx-auto">
+        <h1 class="flex-grow sm:pr-16 text-5xl font-bold title-font text-gray-900 mb-6">Try ClassCards today, <span class="text-brand-500"> 100% free. </span></h1>
+        <button class="btn btn-started px-6 text-xl font-normal py-3 text-lg hover:bg-green-600" >
+          Get Started
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="text-gray-700 body-font" style="background: #f5f6f8">
+  <div class="px-5 py-12 px-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+    <div class="w-1/3 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="../assets/logo.png" class="h-8 w-auto object-cover " alt="">
+        <span class="ml-3 text-xl">ClassCards</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-600">All Rights Reserved © ClassCards, Inc.</p>
+      <p class="mt-8 text-lg font-bold">Address:</p>
+      <p class="mt-2 text-sm text-gray-600">4400 NW 19th Ave. Deerfield Beach, FL 33012</p>
+      <div class="mt-4 flex items-center">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="h-10 w-auto object-cover " alt="">
+        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" class="h-7 w-auto object-cover " alt="">
+
+      </div>
+
+    </div>
+    <div class="flex w-3/5 flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      <div v-for="(route, ind) in routes" :key="ind+100" class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font text-lg text-gray-700 font-bold text-sm mb-3">{{route.name}}</h2>
+        <nav class="list-none mb-10 w-full">
+          <li v-for="(route2, ind2) in route.vals" :key="ind2" class="my-4 w-full">
+            <a class="text-gray-600 cursor-pointer w-full block text-base text-left common-trans hover:text-brand-500">{{route2.name}}</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-gray-300">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 ClassCards, Inc
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+
   </div>
 </template>
 
@@ -190,6 +366,11 @@ export default {
   name: 'Home',
   components: {
     NavBar
+  },
+  computed: {
+    routes() {
+      return this.$store.getters.getRoutes
+    },
   }
 }
 </script>

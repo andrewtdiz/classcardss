@@ -97,57 +97,27 @@ export default new Vuex.Store({
               {
                   name: 'Cards',
                   link: '/cards',
-                  desc: 'Lorem ipsum simet dolor',
+                  desc: 'Distilled, testable containers of knowledge',
               },
               {
                   name: 'Decks',
                   link: '/decks',
-                  desc: 'Lorem ipsum simet dolor',
+                  desc: 'Collections of cards, shared with friends and classmates',
               },
               {
                   name: 'Study Sessions',
                   link: '/studysessions',
-                  desc: 'Lorem ipsum simet dolor',
+                  desc: 'Create interactive sessions to learn and recall cards',
               },
               {
-                  name: 'Groups',
+                  name: 'Group Studying',
                   link: '/groups',
-                  desc: 'Lorem ipsum simet dolor',
+                  desc: 'Invite friends to study together live',
               }
           ],
       },
       {
           name: 'Students',
-          vals: [
-              {
-                  name: 'Making Cards',
-                  link: '/makingcards',
-                  desc: 'Lorem ipsum simet dolor',
-              },
-              {
-                  name: 'Studying',
-                  link: '/studying',
-                  desc: 'Lorem ipsum simet dolor',
-              },
-              {
-                  name: 'Interface',
-                  link: '/interface',
-                  desc: 'Lorem ipsum simet dolor',
-              },
-              {
-                  name: 'Customization',
-                  link: '/settings',
-                  desc: 'Lorem ipsum simet dolor',
-              },
-              {
-                  name: 'Teams',
-                  link: '/teams',
-                  desc: 'Lorem ipsum simet dolor',
-              }
-          ],
-      },
-      {
-          name: 'Educators',
           vals: [
               {
                   name: 'Making Cards',
@@ -189,6 +159,36 @@ export default new Vuex.Store({
                   link: '/teams',
                   desc: 'Lorem ipsum simet dolor',
               }
+          ],
+      },
+      {
+          name: 'Educators',
+          vals: [
+              {
+                  name: 'Making Cards',
+                  link: '/makingcards',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Studying',
+                  link: '/studying',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Interface',
+                  link: '/interface',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'Customization',
+                  link: '/settings',
+                  desc: 'Lorem ipsum simet dolor',
+              },
+              {
+                  name: 'School Systems',
+                  link: '/teams',
+                  desc: 'Lorem ipsum simet dolor',
+              },
           ],
       },
       {

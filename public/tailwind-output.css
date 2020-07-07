@@ -624,7 +624,7 @@ video {
 }
 
 .btn {
-  font-weight: 700;
+  font-weight: 500;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
@@ -636,12 +636,31 @@ video {
   --bg-opacity: 1;
   background-color: #1E92F3;
   background-color: rgba(30, 146, 243, var(--bg-opacity));
+  font-weight: 400;
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-duration: 500ms;
+  transition-duration: 100ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-started {
+  --bg-opacity: 1;
+  background-color: #48bb78;
+  background-color: rgba(72, 187, 120, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.text-landing {
+  font-size: 3rem;
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+  line-height: 1.25;
+  font-weight: 500;
 }
 
 .btn-blue:hover {

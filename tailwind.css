@@ -3,11 +3,19 @@
 @tailwind components;
 
 .btn { 
-    @apply font-bold py-2 px-4 rounded;
+    @apply font-medium py-2 px-4 rounded;
 }
 
 .btn-blue {
-    @apply bg-blue-500 text-white transition duration-500 ease-in-out;
+    @apply bg-blue-500 font-normal text-white transition duration-100 ease-in-out;
+}
+
+.btn-started {
+    @apply bg-green-500 text-white;
+}
+
+.text-landing {
+    @apply text-5xl text-gray-800 leading-tight font-medium;
 }
 
 .btn-blue:hover {
