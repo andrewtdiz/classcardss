@@ -1,5 +1,5 @@
 <template>
-    <div v-click-outside="handleOffClick" @click="handleClick" class="justify-center flex relative items-center mx-3 cursor-pointer hover:bg-gray-200 text-gray-500 hover:text-gray-700 rounded-full w-8 h-8" :class="display==name ? ['bg-gray-200', 'text-gray-700'] : ''">
+    <div v-click-outside="handleOffClick" @click="handleClick" class="justify-center z-20 flex relative items-center mx-3 cursor-pointer hover:bg-gray-200 text-gray-500 hover:text-gray-700 rounded-full w-8 h-8" :class="display==name ? ['bg-gray-200', 'text-gray-700'] : ''">
         <svg class=" fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M6 8v7h8V8a4 4 0 1 0-8 0zm2.03-5.67a2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8a6 6 0 0 1 4.03-5.67zM12 18a2 2 0 1 1-4 0h4z"/></svg>
         <div  @click.stop="" :class="display==name ? ['opacity-100', ' mt-8 '] : ['opacity-0', 'pointer-events-none', 'mt-4']" class="absolute border border-gray-400 transition-margin top-0 right-0 py-2 bg-white rounded-md flex flex-col shadow-xl" style="width: 30rem;">
             <div class="flex w-full px-3 justify-between items-baseline">

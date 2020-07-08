@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
+import DashHome from '../components/dashboard/DashHome.vue'
+import DashDeck from '../components/dashboard/DashDeck.vue'
+
 
 Vue.use(VueRouter)
 
@@ -19,7 +22,19 @@ const routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue'),
+    children: [
+      {
+          path: '',
+          name: '',
+          component: DashHome,
+      },
+      {
+        path: 'Biochemistry',
+        name: '',
+        component: DashDeck,
+      },
+    ]
   },
   {
     path: '/about',

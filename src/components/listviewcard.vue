@@ -1,27 +1,27 @@
 <template>
-    <div class="flex w-full ml-10 h-10 hover:text-blue-500 cursor-pointer select-none" @click="selectCard(card.id)" @mouseenter="hoveringCard = true" @mouseleave="hoveringCard = false" style="padding-bottom: 2px;">
+    <div class="flex w-full h-10 hover:text-blue-500 cursor-pointer select-none" @click="selectCard(card.id)" @mouseenter="hoveringCard = true" @mouseleave="hoveringCard = false" style="padding-bottom: 2px;">
         <div class="w-full items-stretch h-full flex">
         <font-awesome-icon :icon="['fas', 'sort-down']" :class="hoveringCard ? 'text-gray-700' : 'opacity-0'" class="my-auto mr-3" style="transform: translateY(-3px)" />
-        <div class="w-full flex items-stretch h-full bg-white hover:bg-gray-100 ">
+        <div class="w-full border-b border-gray-300 flex items-stretch h-full bg-white hover:bg-gray-100 ">
             <div class="flex-1 flex items-stretch h-full w-96 relative" style="width: 800px">
                 <div class="absolute bg-transparent w-8 h-full flex top-0 z-10 pointer-events-auto" @mouseenter="hoveringSelector = true" @mouseleave="hoveringSelector = false">
                   
                 </div>
-                <div :class="selectorStyle" class="h-full cardselector relative overflow-hidden"
+                <div :class="selectorStyle" class="h-full cardselector bg-brand-500 relative overflow-hidden"
                 >
                   <div class="absolute w-4 bg-white h-4" style="left:1rem; top: 1rem; border-radius: 2px; transform: translate(-50%, -25%)"></div>
                 </div>
-                <div class="flex-1 text-sm flex items-baseline my-auto overflow-hidden" 
+                <div class="flex-1 text-sm border-r border-gray-300 flex items-baseline h-full flex-col justify-center items-start overflow-hidden" 
                 :class="hoveringSelector ? 'ml-2' : 'ml-2'">
                     <p class="specialtext" v-html="card.front"></p>
                 </div>
-                <div class="w-48 text-sm flex items-baseline my-auto overflow-hidden" 
+                <div class="text-sm w-48 items-baseline h-full flex flex-col justify-center items-start overflow-hidden" 
                 :class="hoveringSelector ? 'ml-2' : 'ml-2'">
-                    <p class="specialtext" v-html="card.back"></p>
+                    <p class="specialtext text-left" v-html="card.back"></p>
                 </div>
             </div>
             <div class="bg-red-500 hover:bg-red-400 flex justify-center items-center h-full w-32">
-                <p class="text-white text-sm">Learning</p>
+                <p class="text-white text-sm font-medium">Learning</p>
             </div>
             <div class="flex text-gray-900 hover:text-gray-600 hover:bg-gray-100 justify-center items-center h-full w-32">
                 <p class=" text-sm">May 10</p>
@@ -38,12 +38,13 @@
 <script>
 export default {
   name: 'ListViewCard',
-  props: ['card', 'heading', 'cardGroupColor'],
+  props: ['card', 'heading'],
   data () {
     return {
       hoveringSelector: false,
       checked: false,
       hoveringCard: false,
+      cardGroupColor: 'bg-blue-500',
       colors: ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-orange-500', 'bg-teal-500']
     }
   },

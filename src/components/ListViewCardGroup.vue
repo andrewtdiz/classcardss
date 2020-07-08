@@ -32,16 +32,16 @@
         </svg>
       </div>
     </div>
-    <div class="flex items-basline ml-10 pl-3 select-none my-2">
+    <div class="flex w-full items-basline ml-10 pl-3 select-none my-2">
       <div class="flex-1 flex items-baseline h-full relative" style="font-family: Whitney, Helvetica, Arial, sans-serif;">
           
           <div class="flex-1 w-96 text-xxs text-gray-500 uppercase font-semibold flex items-baseline my-auto overflow-hidden" 
           >
-              <p class="specialtext">FRONT</p>
+              <p class="specialtext text-left">FRONT</p>
           </div>
           <div class="w-48 pl-5 text-xxs text-gray-500 uppercase font-semibold flex items-baseline my-auto overflow-hidden" 
           >
-              <p class="specialtext">BACK</p>
+              <p class="specialtext text-left">BACK</p>
           </div>
       </div>
       <div class="flex pl-8 justify-center items-center h-full w-32">
@@ -85,8 +85,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .specialtext {
-  color: rgba(119,119,119,0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h3 {
